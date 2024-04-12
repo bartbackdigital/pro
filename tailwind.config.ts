@@ -17,6 +17,7 @@ const config: Config = {
       },
       colors: {
         defaultText: "#6e6e6e", // Custom color named defaultText
+        customGray: "#f7f7f7",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

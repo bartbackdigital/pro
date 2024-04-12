@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Header from "./Header";
+import Footer from "./Footer";
 
 export default function Layout({ children, title, description }: any) {
   const router = useRouter();
@@ -67,6 +68,7 @@ export default function Layout({ children, title, description }: any) {
         </Head>
         <Header />
         <main className="font-body text-defaultText">{children}</main>
+        <Footer />
       </div>
     </>
   );
