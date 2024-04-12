@@ -11,7 +11,7 @@ interface ThirdLevelMenuProps {
 const ThirdLevelMenu: React.FC<ThirdLevelMenuProps> = ({ menuItems }: any) => {
   return (
     <div className="absolute left-full top-[-8px] bg-[#2e3e5e] p-2 min-w-[220px]">
-      <ul className="font-normal font-body capitalize">
+      <ul className="font-normal font-body">
         {menuItems.map((item: any, index: any) => (
           <li key={index} className="text-white hover:bg-[#3e4e6e]">
             {item.href ? (
