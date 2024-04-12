@@ -1,40 +1,100 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import SubMenu from "./SubMenu";
 import OrangeButton from "@/components/OrangeButton";
-function HeaderDesktop() {
-  return (
-    <div className="max-w-screen-xl mx-auto px-5 lg:block hidden">
-      <nav className=" font-bold font-heading text-sm uppercase text-[#313131] tracking-wide pt-5 flex justify-between">
-        <div className=" flex justify-between space-x-10 items-center">
-          <Link rel="stylesheet" href="">
-            Home
-          </Link>
-          <Link rel="stylesheet" href="">
-            Onze Mogelijkheden
-          </Link>
-          <Link rel="stylesheet" href="">
-            Waardebepaling
-          </Link>
-          <Image
-            src="/images/proranje-vastgoed-logo.jpg"
-            alt="PRoranje vastgoed"
-            width={130}
-            height={70}
-          />
-          <Link rel="stylesheet" href="">
-            Over Ons
-          </Link>
-          <Link rel="stylesheet" href="">
-            Contact
-          </Link>
-        </div>
-        <div>
-          <OrangeButton>Gratis Advies</OrangeButton>
-        </div>
-      </nav>
+
+interface SubMenuItem {
+  title: string;
+  href: string;
+  subMenu?: SubMenuItem[];
+}
+
+interface MenuItem {
+  title: string;
+  href?: string;
+  subMenu?: SubMenuItem[];
+}
+const HeaderDesktop: React.FC = () => {
+  const menuItemsBeforeLogo: MenuItem[] = [
+    { title: "Home", href: "/" },
+    {
+      title: "Onze Mogelijkheden",
+      href: "#",
+      subMenu: [
+        {
+          title: "Direct verkopen",
+          href: "/huis-snel-verkopen",
+          subMenu: [
+            { title: "Appartement verkopen", href: "/appartement-verkopen" },
+            { title: "Bedrijfspand verkopen", href: "/bedrijfspand-verkopen" },
+            {
+              title: "Beleggingspand verkopen",
+              href: "/beleggingspand-verkopen",
+            },
+            { title: "Executieverkoop", href: "/executieverkoop" },
+            { title: "Geërfd huis verkopen", href: "/geerfd-huis-verkopen" },
+            { title: "Halalhypotheek", href: "/halalhypotheek" },
+            {
+              title: "Studentenhuis verkopen",
+              href: "/studentenhuis-verkopen",
+            },
+            { title: "Pand verkopen", href: "/pand-verkopen" },
+            { title: "Verhuurde woning verkopen", href: "/verhuurd-verkopen" },
+          ],
+        },
+        { title: "Verkoop en terughuren", href: "/verkoop-terughuren" },
+        { title: "Opknappen en verkopen", href: "/opknappen-en-verkopen" },
+        { title: "Beleggingspand kopen", href: "/beleggingspand-kopen" },
+      ],
+    },
+    { title: "Waardebepaling", href: "/waardebepaling" },
+  ];
+
+  const menuItemsAfterLogo: MenuItem[] = [
+    { title: "Over Ons", href: "/over-ons" },
+    { title: "Contact", href: "/contact" },
+  ];
+  // Helper function to render menu items with or without hrefs
+  const renderMenuItem = (item: MenuItem, index: number) => (
+    <div key={index} className="relative group hover:text-gray-300">
+      {item.href ? (
+        <Link href={item.href} passHref>
+          <span className="cursor-pointer">{item.title}</span>
+        </Link>
+      ) : (
+        <span>{item.title}</span>
+      )}
+      {item.subMenu && <SubMenu menuItems={item.subMenu} />}
     </div>
   );
-}
+
+  return (
+    <div className="max-w-screen-xl pt-5 mx-auto px-5 lg:flex hidden items-center justify-between font-heading font-bold uppercase text-sm">
+      <div className="flex justify-between">
+        <nav className="flex-grow">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-5">
+              {menuItemsBeforeLogo.map(renderMenuItem)}
+            </div>
+
+            <Image
+              src="/images/proranje-vastgoed-logo.jpg"
+              alt="PRoranje Vastgoed"
+              width={130}
+              height={70}
+              priority
+            />
+
+            <div className="flex items-center space-x-5">
+              {menuItemsAfterLogo.map(renderMenuItem)}
+            </div>
+          </div>
+        </nav>
+        <OrangeButton href="/gratis-advies">Gratis Advies</OrangeButton>
+      </div>
+    </div>
+  );
+};
 
 export default HeaderDesktop;

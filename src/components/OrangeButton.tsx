@@ -23,8 +23,8 @@ const OrangeButton: React.FC<OrangeButtonProps> = ({ href, children }) => {
 
   if (href) {
     return (
-      <Link href={href} passHref>
-        <a className={combinedStyles}>{children}</a>
+      <Link href={href} passHref className={combinedStyles}>
+        {children}
       </Link>
     );
   }
