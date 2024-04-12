@@ -71,10 +71,10 @@ const HeaderDesktop: React.FC = () => {
 
   return (
     <div className="max-w-screen-xl pt-5 mx-auto px-5 lg:flex hidden items-center justify-between font-heading font-bold uppercase text-sm">
-      <div className="flex justify-between">
-        <nav className="flex-grow">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-5">
+      <div className="flex justify-between items-center w-full">
+        <nav className="">
+          <div className="flex items-center justify-between space-x-8">
+            <div className="flex items-center space-x-8">
               {menuItemsBeforeLogo.map(renderMenuItem)}
             </div>
 
