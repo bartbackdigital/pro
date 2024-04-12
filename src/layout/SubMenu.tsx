@@ -10,7 +10,7 @@ interface SubMenuProps {
 
 const SubMenu: React.FC<SubMenuProps> = ({ menuItems }) => {
   return (
-    <ul className="absolute hidden group-hover:block bg-[#2e3e5e] p-2">
+    <ul className="absolute top-16 hidden group-hover:block bg-[#2e3e5e] p-2 font-normal font-body capitalize min-w-[220px]">
       {menuItems.map((item, index) => (
         <li key={index} className="relative text-white hover:bg-[#3e4e6e]">
           {item.href ? (

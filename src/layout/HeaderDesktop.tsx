@@ -57,7 +57,7 @@ const HeaderDesktop: React.FC = () => {
   ];
   // Helper function to render menu items with or without hrefs
   const renderMenuItem = (item: MenuItem, index: number) => (
-    <div key={index} className="relative group hover:text-gray-300">
+    <div key={index} className="relative group tracking-[0.5px] pb-7 pt-7">
       {item.href ? (
         <Link href={item.href} passHref>
           <span className="cursor-pointer">{item.title}</span>
@@ -70,9 +70,9 @@ const HeaderDesktop: React.FC = () => {
   );
 
   return (
-    <div className="max-w-screen-xl pt-5 mx-auto px-5 lg:flex hidden items-center justify-between font-heading font-bold uppercase text-sm">
+    <div className="max-w-screen-xl mx-auto px-5 lg:flex hidden items-center justify-between font-heading font-bold uppercase text-sm">
       <div className="flex justify-between items-center w-full">
-        <nav className="">
+        <nav className="pl-12">
           <div className="flex items-center justify-between space-x-8">
             <div className="flex items-center space-x-8">
               {menuItemsBeforeLogo.map(renderMenuItem)}
@@ -86,7 +86,7 @@ const HeaderDesktop: React.FC = () => {
               priority
             />
 
-            <div className="flex items-center space-x-5">
+            <div className="flex items-center  space-x-8">
               {menuItemsAfterLogo.map(renderMenuItem)}
             </div>
           </div>
