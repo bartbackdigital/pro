@@ -1,14 +1,19 @@
-// components/MobileMenu.tsx
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { menuItemsBeforeLogo, menuItemsAfterLogo } from "../data/menuItems"; // Ensure the path is correct
 import { MenuItem } from "../types/MenuTypes"; // Ensure the path is correct
 import Image from "next/image";
+
 interface Props {
   closeMenu: () => void;
+  menuItemsBeforeLogo: MenuItem[];
+  menuItemsAfterLogo: MenuItem[];
 }
 
-const MobileMenu: React.FC<Props> = ({ closeMenu }) => {
+const MobileMenu: React.FC<Props> = ({
+  closeMenu,
+  menuItemsBeforeLogo,
+  menuItemsAfterLogo,
+}) => {
   const [showOverlay, setShowOverlay] = useState(false);
 
   useEffect(() => {
@@ -58,10 +63,7 @@ const MobileMenu: React.FC<Props> = ({ closeMenu }) => {
         }}
       >
         <div className="flex items-center mb-10">
-          <button onClick={closeMenu} className="text-2xl text-bl">
-            X
-          </button>
-          <div className="pl-5">
+          <div className="pl-5 pt-3">
             <Image
               src="/images/proranje-vastgoed-logo.jpg"
               alt="PRoranje Vastgoed"

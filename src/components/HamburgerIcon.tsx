@@ -16,7 +16,7 @@ const HamburgerIcon: React.FC<HamburgerIconProps & { isOpen: boolean }> = ({
     height={32}
     viewBox="0 0 32 32"
     {...props}
-    fill={color === "white" ? "#FFF" : "#000"} // This ensures the color stays consistent based on the `color` prop
+    fill={color === "white" ? "#FFF" : "#6e6e6e"} // This ensures the color stays consistent based on the `color` prop
   >
     <rect
       x="2"
@@ -24,7 +24,7 @@ const HamburgerIcon: React.FC<HamburgerIconProps & { isOpen: boolean }> = ({
       width="28"
       height="4"
       className={`origin-center transition-all duration-500 ease-in-out ${
-        isOpen ? "translate-x-[2px] translate-y-[10px] rotate-45" : ""
+        isOpen ? "translate-x-[-2px] translate-y-[8px] rotate-45" : ""
       }`}
     />
     <rect
@@ -42,7 +42,7 @@ const HamburgerIcon: React.FC<HamburgerIconProps & { isOpen: boolean }> = ({
       width="28"
       height="4"
       className={`origin-center transition-all duration-500 ease-in-out ${
-        isOpen ? "translate-x-[2px] translate-y-[-6px] -rotate-45" : ""
+        isOpen ? "translate-x-[-2px] translate-y-[-4px] -rotate-45" : ""
       }`}
     />
   </svg>
