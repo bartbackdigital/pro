@@ -4,7 +4,7 @@ import Image from "next/image";
 import OrangeButton from "@/components/OrangeButton";
 function HeaderDesktop() {
   return (
-    <div className="max-w-screen-xl mx-auto px-5">
+    <div className="max-w-screen-xl mx-auto px-5 lg:block hidden">
       <nav className=" font-bold font-heading text-sm uppercase text-[#313131] tracking-wide pt-5 flex justify-between">
         <div className=" flex justify-between space-x-10 items-center">
           <Link rel="stylesheet" href="">
