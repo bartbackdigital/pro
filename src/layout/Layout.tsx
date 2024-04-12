@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
+import Header from "./Header";
 
 export default function Layout({ children, title, description }: any) {
   const router = useRouter();
@@ -64,7 +65,7 @@ export default function Layout({ children, title, description }: any) {
           <meta name="msapplication-TileColor" content="#a4de95" />
           <meta name="theme-color" content="#ffffff" />
         </Head>
-
+        <Header />
         <main className="font-body text-defaultText">{children}</main>
       </div>
     </>
