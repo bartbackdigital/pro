@@ -3,15 +3,15 @@ import Link from "next/link";
 
 // Define the structure for the location details
 interface LocationDetails {
+  title: string;
   address: string;
   postalCode: string;
   tel: string;
   email: string;
-  title: string;
   mapUrl: string;
 }
-// A mapping of place names to their details and map URLs
 
+// Mapping of place names to their details and map URLs
 const locationData: Record<string, LocationDetails> = {
   Amsterdam: {
     title: "Amsterdam",
@@ -42,7 +42,6 @@ const locationData: Record<string, LocationDetails> = {
   },
 };
 
-// Define the props structure using an interface
 interface GoogleMapsSectionProps {
   place: keyof typeof locationData;
 }
@@ -50,18 +49,15 @@ interface GoogleMapsSectionProps {
 function GoogleMapsSection({ place }: GoogleMapsSectionProps) {
   const location = locationData[place];
 
-  if (!location) {
-    return <div>Invalid location specified.</div>;
-  }
-
-  const mirrorClass = place === "Rotterdam" ? "flex-row-reverse" : ""; // Adding a conditional class for mirrored layout
+  // Apply mirroring for the Rotterdam section
+  const mirrorClass = place === "Rotterdam" ? "flex-row-reverse" : "";
 
   return (
     <section className="w-full relative block">
       <div className="max-w-screen-xl mx-auto px-5">
-        <div className={`flex py-10 ${location.title}`}>
-          <div className="flex-1 flex flex-col space-y-3">
-            <h2 className="font-bold text-xl">{place}</h2>
+        <div className={`flex py-10 ${mirrorClass} `}>
+          <div className="flex-1 flex flex-col space-y-3 p-5">
+            <h2 className="font-bold text-xl">{location.title}</h2>
             <span>{location.address}</span>
             <span>{location.postalCode}</span>
             <Link href={`tel:${location.tel}`}>Tel: {location.tel}</Link>
@@ -74,7 +70,6 @@ function GoogleMapsSection({ place }: GoogleMapsSectionProps) {
               src={location.mapUrl}
               width="600"
               height="450"
-              frameBorder="0"
               style={{ border: 0 }}
               allowFullScreen={false}
               aria-hidden="false"
