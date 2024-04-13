@@ -23,6 +23,8 @@ const config: Config = {
       colors: {
         primary: "#2e3e5e",
         secondary: "#ea4517",
+        contentGray: "#e6e6e6",
+        gray50: "#747474",
         darkGray: "#3a3b3d",
         defaultText: "#6e6e6e", // Custom color named defaultText
         customGray: "#f7f7f7",

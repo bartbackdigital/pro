@@ -42,22 +42,51 @@ function DesktopFooter() {
                 </div>
               </div>
             </div>
+            <h3 className="uppercase  text-h3 text-darkGray mb-10 mt-40">
+              Socialmedia
+            </h3>
+            <div className="flex flex-row space-x-5">
+              <Link className="" href="">
+                <Image
+                  src="/images/facebook.png"
+                  alt=""
+                  width={35}
+                  height={35}
+                />
+              </Link>
+              <Link className="" href="">
+                <Image
+                  src="/images/linkedin.png"
+                  alt=""
+                  width={35}
+                  height={35}
+                />
+              </Link>
+              <Link className="" href="">
+                <Image
+                  src="/images/instagram-logo.png"
+                  alt=""
+                  width={35}
+                  height={35}
+                />
+              </Link>
+            </div>
           </div>
-          <div className="flex-1  pt-10">
+          <div className="flex-1  pt-10 footer_listing">
             <h3 className="uppercase  text-h3 text-darkGray mb-10">Steden</h3>
             <div className="flex flex-col pt-3">
-              <div className="w-full flex mb-6 flex-col  space-y-3">
+              <div className="w-full flex mb-6 flex-col  space-y-3 ">
                 <Link href="/" className="">
-                  Gouden tip
+                  Huis verkopen Amsterdam
                 </Link>
                 <Link href="/" className="">
-                  Kosten huis verkopen
+                  Huis verkopen Den Haag
                 </Link>
                 <Link href="/" className="">
-                  Verkopen zonder makelaar
+                  Huis verkopen Rotterdam
                 </Link>
                 <Link href="/" className="">
-                  Huis zelf verkopen
+                  Huis verkopen Utrecht
                 </Link>
               </div>
               <h3 className="uppercase  text-h3 text-darkGray my-10">

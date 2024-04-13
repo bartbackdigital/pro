@@ -23,7 +23,7 @@ const HeaderMobile: React.FC = () => {
         </Link>
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="absolute right-7 top-7 z-50 md:hidden"
+          className="absolute right-7 top-7 z-50 lg:hidden"
         >
           <HamburgerIcon isOpen={isMenuOpen} color={"black"} />
         </button>
