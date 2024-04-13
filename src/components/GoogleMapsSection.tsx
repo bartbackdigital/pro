@@ -50,14 +50,16 @@ function GoogleMapsSection({ place }: GoogleMapsSectionProps) {
   const location = locationData[place];
 
   // Apply mirroring for the Rotterdam section
-  const mirrorClass = place === "Rotterdam" ? "flex-row-reverse" : "";
+  const mirrorClass = place === "Rotterdam" ? "md:flex-row-reverse" : "";
 
   return (
     <section className="w-full relative block">
       <div className="max-w-screen-xl mx-auto px-5">
-        <div className={`flex py-10 ${mirrorClass} `}>
-          <div className="flex-1 flex flex-col space-y-3 p-5">
-            <h2 className="font-bold text-xl">{location.title}</h2>
+        <div className={`flex py-10 flex-col md:flex-row ${mirrorClass}`}>
+          <div className="flex-1 flex flex-col md:mb-0 mb-10 space-y-5 px-10">
+            <h2 className="font-bold text-[28px] mb-8 text-xl text-black mt-10">
+              {location.title}
+            </h2>
             <span>{location.address}</span>
             <span>{location.postalCode}</span>
             <Link href={`tel:${location.tel}`}>Tel: {location.tel}</Link>
