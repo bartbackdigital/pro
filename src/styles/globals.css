@@ -32,10 +32,17 @@
   .location {
     background-position: 0 36px;
   }
-  input {
+  input,
+  select {
     background: #eaeaea;
     font-size: 15px !important;
     padding: 15px 22px !important;
     color: #7c7c7c;
+  }
+  select {
+    background-image: url("/images/icons8-dropdown-24.png");
+    background-position: right center;
+    background-repeat: no-repeat;
+    -webkit-appearance: none;
   }
 }

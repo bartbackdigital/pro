@@ -17,6 +17,12 @@ function HeaderFormComponent() {
           <div>
             <strong className="block mt-5">Waar bent u naar opzoek?</strong>
           </div>
+          <select>
+            <option>Verkopen</option>
+            <option>Verkopen & Terughuren</option>
+            <option>Verkopen met Huurders</option>
+            <option>Overig</option>
+          </select>
         </form>
       </div>
     </section>
