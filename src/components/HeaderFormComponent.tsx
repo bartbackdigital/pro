@@ -1,4 +1,5 @@
 import React from "react";
+import OrangeButton from "./OrangeButton";
 
 function HeaderFormComponent() {
   return (
@@ -10,19 +11,24 @@ function HeaderFormComponent() {
             En wij zullen z.s.m. contact opnemen met u.
           </span>
         </div>
-        <form className=" w-full flex flex-col space-y-3 px-10">
-          <input type="text" placeholder="Uw naam" />
-          <input type="text" placeholder="E-mailadres" />
-          <input type="text" placeholder="Telefoonnummer" />
-          <div>
-            <strong className="block mt-5">Waar bent u naar opzoek?</strong>
+        <form className="">
+          <div className="max-w-screen-md w-full flex flex-col space-y-3 px-10 mx-auto">
+            <input type="text" placeholder="Uw naam" />
+            <input type="text" placeholder="E-mailadres" />
+            <input type="text" placeholder="Telefoonnummer" />
+            <div>
+              <strong className="block mt-5">Waar bent u naar opzoek?</strong>
+            </div>
+            <select>
+              <option>Waar bent u naar opzoek?</option>
+              <option>Verkopen</option>
+              <option>Verkopen & Terughuren</option>
+              <option>Verkopen met Huurders</option>
+              <option>Overig</option>
+            </select>
+            <textarea className="min-h-[200px]" />
+            <OrangeButton>Versturen</OrangeButton>
           </div>
-          <select>
-            <option>Verkopen</option>
-            <option>Verkopen & Terughuren</option>
-            <option>Verkopen met Huurders</option>
-            <option>Overig</option>
-          </select>
         </form>
       </div>
     </section>

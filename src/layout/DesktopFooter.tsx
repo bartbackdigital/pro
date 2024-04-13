@@ -6,7 +6,7 @@ function DesktopFooter() {
   return (
     <section className="bg-customGray w-full px-5 font-poppins text-base text-darkGray">
       <div className="max-w-screen-xl mx-auto">
-        <div className="flex">
+        <div className="flex flex-col md:flex-row">
           <div className="flex-1 pt-10">
             <h3 className="uppercase  text-h3 text-darkGray mb-10">Contact</h3>
             <div className="flex flex-col">
@@ -42,7 +42,7 @@ function DesktopFooter() {
                 </div>
               </div>
             </div>
-            <h3 className="uppercase  text-h3 text-darkGray mb-10 mt-40">
+            <h3 className="uppercase  text-h3 text-darkGray mb-10 mt-20 md:mt-40">
               Socialmedia
             </h3>
             <div className="flex flex-row space-x-5">
@@ -72,8 +72,10 @@ function DesktopFooter() {
               </Link>
             </div>
           </div>
-          <div className="flex-1  pt-10 footer_listing">
-            <h3 className="uppercase  text-h3 text-darkGray mb-10">Steden</h3>
+          <div className="flex-1 pt-20  md:pt-10 footer_listing">
+            <h3 className="uppercase  text-h3 text-darkGray mb-5 md:mb-10">
+              Steden
+            </h3>
             <div className="flex flex-col pt-3">
               <div className="w-full flex mb-6 flex-col  space-y-3 ">
                 <Link href="/" className="">
@@ -117,18 +119,28 @@ function DesktopFooter() {
               </div>
             </div>
           </div>
-          <div className="flex-1 bg-primary text-white text-center py-10">
-            <Link title="proranje" href="/">
+          <div className="flex-1 bg-primary mt-10 md:mt-0 text-white text-center py-5 md:py-10">
+            <Link title="proranje" href="/" className="hidden md:block">
               <Image
                 decoding="async"
                 src="/images/proranje-footer-logo.png"
                 alt="randstad real estate logo"
                 width={200}
                 height={130}
-                className="mx-auto my-44"
+                className="mx-auto my-10 md:my-44"
+              />
+            </Link>{" "}
+            <Link title="proranje" href="/" className="md:hidden">
+              <Image
+                decoding="async"
+                src="/images/proranje-footer-logo.png"
+                alt="randstad real estate logo"
+                width={350}
+                height={200}
+                className="mx-auto my-10 md:my-44"
               />
             </Link>
-            <div className="text-base flex-col flex space-y-2 font-poppins pb-20">
+            <div className="text-base flex-col flex space-y-2 font-poppins pb-10 md:pb-20">
               <Link
                 className="sitemap"
                 title="sitemap"
