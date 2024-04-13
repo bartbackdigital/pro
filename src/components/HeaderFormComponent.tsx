@@ -3,7 +3,7 @@ import OrangeButton from "./OrangeButton";
 
 function HeaderFormComponent() {
   return (
-    <section className="w-full bg-[#f3f3f3] text-darkGray mt-28">
+    <section className="w-full bg-[#f3f3f3] pb-12 text-darkGray mt-28">
       <div className="relative max-w-screen-xl mx-auto py-6  font-poppins">
         <div className="text-center mb-14">
           <h1 className="text-[30px] font-bold">Stel uw vraag hieronder </h1>
