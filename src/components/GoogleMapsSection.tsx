@@ -56,8 +56,8 @@ function GoogleMapsSection({ place }: GoogleMapsSectionProps) {
     <section className="w-full relative block">
       <div className="max-w-screen-xl mx-auto px-5">
         <div className={`flex py-10 flex-col md:flex-row ${mirrorClass}`}>
-          <div className="flex-1 flex flex-col md:mb-0 mb-10 space-y-5 px-10">
-            <h2 className="font-bold text-[28px] mb-8 text-xl text-black mt-10">
+          <div className="flex-1 flex flex-col md:mb-0 mb-20 space-y-5 px-10">
+            <h2 className="font-bold text-[28px] mb-8 text-xl text-black  md:mt-10">
               {location.title}
             </h2>
             <span>{location.address}</span>
@@ -72,6 +72,7 @@ function GoogleMapsSection({ place }: GoogleMapsSectionProps) {
               src={location.mapUrl}
               width="600"
               height="450"
+              className="w-full"
               style={{ border: 0 }}
               allowFullScreen={false}
               aria-hidden="false"
