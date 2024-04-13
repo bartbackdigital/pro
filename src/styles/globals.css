@@ -2,3 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@800&family=Poppins:wght@400&display=swap");
+.mail,
+.phone,
+.location {
+  background-image: url(https://cloud.proranje.nl/2018/07/sprite_footer_icons.png);
+  height: 40px;
+  width: 45px;
+  margin-top: 15px;
+  float: left;
+  margin-right: 25px;
+}
+.phone {
+  background-position: 0 108px;
+}
+.location {
+  background-position: 0 36px;
+}
