@@ -46,6 +46,7 @@ const config: Config = {
         "primary-50": "#0cb4ce",
         secondary: "#ea4517",
         contentGray: "#e6e6e6",
+        textGray: "#383838",
         gray50: "#747474",
         darkGray: "#3a3b3d",
         defaultText: "#6e6e6e", // Custom color named defaultText
