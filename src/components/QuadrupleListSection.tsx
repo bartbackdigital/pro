@@ -79,7 +79,7 @@ function QuadrupleListSection() {
                   </li>
                 ))}
               </ul>
-              <div className="mt-10">
+              <div className="mt-10 md:hidden">
                 <RegularButton>{section.moreInfo}</RegularButton>
               </div>
               <div className="absolute bottom-14 hidden md:block">
