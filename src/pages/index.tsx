@@ -3,6 +3,7 @@ import Layout from "@/layout/Layout";
 import HeaderHome from "../components/HeaderHome";
 import GoogleMapsLocations from "@/components/GoogleMapsLocations";
 import QuadrupleListSection from "@/components/QuadrupleListSection";
+import TrippleNumberSection from "@/components/TrippleNumberSection";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
         <HeaderHome />
         <GoogleMapsLocations />
         <QuadrupleListSection />
+        <TrippleNumberSection />
       </Layout>
     </>
   );

@@ -51,14 +51,21 @@ function QuadrupleListSection() {
     <section className="relative w-full mt-10">
       <div className="bg-primary py-10 text-white text-[30px] font-bold font-nunito">
         <div className="max-w-screen-xl px-5 mx-auto">
-          <h2>Onze Mogelijkheden</h2>
+          <h2>Onze mogelijkheden</h2>
           <div className="w-[100px] border-b-[3px] mt-3 border-b-primary-50"></div>
         </div>
       </div>
-      <div className="max-w-screen-xl mx-auto py-16 relative block pb-40">
-        <div className="flex space-x-5">
-          {listSections.map((section) => (
-            <div key={section.title} className="pr-10 flex-1">
+      <div className="max-w-screen-xl mx-auto py-10 px-5 relative block pb-40">
+        <div className="flex md:space-x-5 flex-col md:flex-row space-y-5 md:space-y-0">
+          {listSections.map((section, index) => (
+            <div
+              key={section.title}
+              className={`pr-5 flex-1 ${
+                (index + 1) % 2 === 0
+                  ? "bg-contentGray md:bg-white"
+                  : "bg-white"
+              } p-7`}
+            >
               <h3 className="text-textGray text-[20px] font-medium">
                 {section.title}
               </h3>
@@ -72,7 +79,10 @@ function QuadrupleListSection() {
                   </li>
                 ))}
               </ul>
-              <div className="absolute bottom-14">
+              <div className="mt-10">
+                <RegularButton>{section.moreInfo}</RegularButton>
+              </div>
+              <div className="absolute bottom-14 hidden md:block">
                 <RegularButton>{section.moreInfo}</RegularButton>
               </div>
             </div>
