@@ -8,6 +8,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animation: {
+        mover: "mover 1s infinite alternate",
+      },
+      keyframes: {
+        mover: {
+          "0%": { transform: "translateX(0px)" },
+          "100%": { transform: "translateX(10px)" },
+        },
+      },
       fontSize: {
         h3: "20px", // Custom font size for h3
       },

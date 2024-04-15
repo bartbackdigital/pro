@@ -2,6 +2,7 @@ import React from "react";
 import OrangeButton from "./OrangeButton";
 import Image from "next/image";
 import GreenCheck from "@/icons/GreenCheck";
+import CtaButton from "./CtaButton";
 
 function HeaderHome() {
   return (
@@ -15,8 +16,11 @@ function HeaderHome() {
         />
       </div>
       <div className="max-w-screen-xl mx-auto flex items-center py-10 px-10 md:px-20 relative z-10">
-        <div className="md:max-w-[500px] bg-opacity-65 bg-[#e6e6e6] p-10 text-darkGray">
-          <h1 className="text-[31px] font-bold leading-[1.2] mt-0 mb-5 pt-10 w-[80%]">
+        <div className="md:max-w-[500px] bg-opacity-65 bg-[#e6e6e6] p-12 text-darkGray">
+          <h1
+            className="text-[31px] font-bold leading-[1.2] mt-0 mb-5 
+        w-[80%]"
+          >
             Uw huis of beleggingspand verkopen?
           </h1>
 
@@ -28,7 +32,7 @@ function HeaderHome() {
             nou woningen zijn, winkels of kantoren. Wij zijn actief in heel
             Nederland.
           </p>
-          <OrangeButton>Vraag een vrijblijvend bod aan</OrangeButton>
+          <CtaButton>Vraag een vrijblijvend bod aan</CtaButton>
         </div>
       </div>
       <div className="bg-primary z-20 relative text-white">
