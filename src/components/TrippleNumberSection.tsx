@@ -4,12 +4,12 @@ function TrippleNumberSection() {
   return (
     <section className="w-full bg-primary-200 py-10">
       <div className="bg-primary py-10 font-bold font-nunito">
-        <div className="max-w-screen-xl pl-14 pr-5 mx-auto">
+        <div className="max-w-screen-xl pl-10 pr-5 mx-auto">
           <h2 className="text-white text-[30px]">Werkwijze</h2>
           <div className="w-[100px] border-b-[3px] mt-3 border-b-primary-50"></div>
         </div>
         <div className="max-w-screen-xl px-5 mx-auto">
-          <div className="flex space-y-5 md:space-y-0 md:space-x-5 px-5 mt-10 flex-col md:flex-row">
+          <div className="flex space-y-5 md:space-y-0 md:space-x-5 mt-10 flex-col md:flex-row">
             <div
               className="flex-1 bg-white pr-10 pb-10 pl-20 relative"
               style={{
@@ -35,7 +35,7 @@ function TrippleNumberSection() {
                 backgroundRepeat: "no-repeat",
               }}
             >
-              <h3 className="text-textGray font-bold text-[27px] mt-8 mb-5">
+              <h3 className="text-textGray font-heading font-bold text-[27px] mt-8 mb-5">
                 Kennismaking
               </h3>
               <p className="font-normal  text-[14px] leading-[1.7]">

@@ -50,7 +50,7 @@ function QuadrupleListSection() {
   return (
     <section className="relative w-full mt-10">
       <div className="bg-primary py-10 text-white text-[30px] font-bold font-nunito">
-        <div className="max-w-screen-xl px-5 mx-auto">
+        <div className="max-w-screen-xl pl-10 mx-auto">
           <h2>Onze mogelijkheden</h2>
           <div className="w-[100px] border-b-[3px] mt-3 border-b-primary-50"></div>
         </div>
@@ -64,7 +64,7 @@ function QuadrupleListSection() {
                 (index + 1) % 2 === 0
                   ? "bg-contentGray md:bg-white"
                   : "bg-white"
-              } p-7`}
+              } p-7 pl-0`}
             >
               <h3 className="text-textGray text-[20px] font-medium">
                 {section.title}
