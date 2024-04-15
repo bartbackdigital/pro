@@ -55,7 +55,7 @@ function QuadrupleListSection() {
           <div className="w-[100px] border-b-[3px] mt-3 border-b-primary-50"></div>
         </div>
       </div>
-      <div className="max-w-screen-xl mx-auto py-10 px-5 relative block pb-40">
+      <div className="max-w-screen-xl mx-auto py-10 px-5 relative block pb-10">
         <div className="flex md:space-x-5 flex-col md:flex-row space-y-5 md:space-y-0">
           {listSections.map((section, index) => (
             <div
