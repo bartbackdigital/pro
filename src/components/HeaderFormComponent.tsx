@@ -66,13 +66,24 @@ function HeaderFormComponent() {
         </div>
         <form onSubmit={handleSubmit}>
           <div className="max-w-screen-md w-full flex flex-col space-y-3 px-10 mx-auto">
-            <input
-              type="text"
-              name="name"
-              placeholder="Uw naam"
-              value={formData.name}
-              onChange={handleChange}
-            />
+            <div className="flex space-x-5 flex-col md:flex-row">
+              <input
+                type="text"
+                name="first_name"
+                className="w-full"
+                placeholder="Voornaam"
+                value={formData.name}
+                onChange={handleChange}
+              />
+              <input
+                type="text"
+                name="last_name"
+                className="w-full"
+                placeholder="Achternaam"
+                value={formData.name}
+                onChange={handleChange}
+              />
+            </div>
             <input
               type="email"
               name="email"
@@ -89,7 +100,7 @@ function HeaderFormComponent() {
             />
             <div>
               <strong className="block mt-5 mb-3">
-                Waar bent u naar opzoek?
+                * Waar bent u naar opzoek?
               </strong>
               <select
                 name="inquiryType"

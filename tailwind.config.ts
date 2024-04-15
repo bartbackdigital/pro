@@ -30,7 +30,20 @@ const config: Config = {
         poppins: ["Poppins", "sans-serif"], // Assuming Poppins for body text
       },
       colors: {
-        primary: "#2e3e5e",
+        primary: {
+          DEFAULT: "#2e3e5e",
+          50: "#e6f7fb", // Lightest shade
+          100: "#bfeef7",
+          200: "#2e3e5e",
+          300: "#66d4ed",
+          400: "#33c3e6",
+          500: "#0cb4ce", // Your specified color for primary-50
+          600: "#0a91a4", // Slightly darker
+          700: "#08707a", // Even darker
+          800: "#064f5a", // Dark shade
+          900: "#042f3a", // Darkest shade
+        },
+        "primary-50": "#0cb4ce",
         secondary: "#ea4517",
         contentGray: "#e6e6e6",
         gray50: "#747474",

@@ -77,21 +77,21 @@ const HeaderDesktop: React.FC = () => {
             <div className="flex items-center space-x-8">
               {menuItemsBeforeLogo.map(renderMenuItem)}
             </div>
-
-            <Image
-              src="/images/proranje-vastgoed-logo.jpg"
-              alt="PRoranje Vastgoed"
-              width={130}
-              height={70}
-              priority
-            />
-
+            <Link href="/" title="Proranje Vastgoed">
+              <Image
+                src="/images/proranje-vastgoed-logo.jpg"
+                alt="PRoranje Vastgoed"
+                width={130}
+                height={70}
+                priority
+              />
+            </Link>
             <div className="flex items-center  space-x-8">
               {menuItemsAfterLogo.map(renderMenuItem)}
             </div>
           </div>
         </nav>
-        <OrangeButton href="/gratis-advies">Gratis Advies</OrangeButton>
+        <OrangeButton href="/contact">Gratis Advies</OrangeButton>
       </div>
     </div>
   );

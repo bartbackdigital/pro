@@ -16,7 +16,7 @@ function HeaderHome() {
         />
       </div>
       <div className="max-w-screen-xl mx-auto flex items-center py-10 px-10 md:px-20 relative z-10">
-        <div className="md:max-w-[500px] bg-opacity-65 bg-[#e6e6e6] p-12 text-darkGray">
+        <div className="md:max-w-[500px] bg-opacity-70 bg-[#fff] p-12 text-darkGray">
           <h1
             className="text-[31px] font-bold leading-[1.2] mt-0 mb-5 
         w-[80%]"
