@@ -23,10 +23,7 @@ export default function Layout({ children, title, description }: any) {
           />
           <meta property="og:url" content={currentUrl} />
           <meta property="og:type" content="website" />
-          <meta
-            property="og:image"
-            content="https://proranje.vercel.app/_next/image?url=%2Fimages%2FVroesenlaan.jpg&w=1200&q=75"
-          />
+          <meta property="og:image" content="/images/Vroesenlaan.jpg" />
           <meta property="og:image:alt" content="Proranje Beleggingspand" />
           <meta property="og:site_name" content="Proranje" />
           <meta property="og:locale" content="en_US" />
@@ -40,10 +37,7 @@ export default function Layout({ children, title, description }: any) {
             name="twitter:description"
             content={description ? description : ""}
           />
-          <meta
-            name="twitter:image"
-            content="https://proranje.vercel.app/_next/image?url=%2Fimages%2FVroesenlaan.jpg&w=1200&q=75"
-          />
+          <meta name="twitter:image" content="/images/Vroesenlaan.jpg" />
           <link
             rel="apple-touch-icon"
             sizes="180x180"
