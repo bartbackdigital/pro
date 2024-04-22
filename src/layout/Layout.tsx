@@ -25,24 +25,24 @@ export default function Layout({ children, title, description }: any) {
           <meta property="og:type" content="website" />
           <meta
             property="og:image"
-            content="https://green-land-eight.vercel.app/images/ak-020-amsterdam-genetics.jpg"
+            content="https://proranje.vercel.app/_next/image?url=%2Fimages%2FVroesenlaan.jpg&w=1200&q=75"
           />
-          <meta property="og:image:alt" content="Greenland example product" />
-          <meta property="og:site_name" content="GreenLands" />
+          <meta property="og:image:alt" content="Proranje Beleggingspand" />
+          <meta property="og:site_name" content="Proranje" />
           <meta property="og:locale" content="en_US" />
           <meta property="fb:app_id" content="Your Facebook App ID" />
           <meta property="article:author" content="Your Author Name" />
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:site" content="@yourtwitterhandle" />
-          <meta name="twitter:creator" content="@yourtwitterhandle" />
-          <meta name="twitter:title" content={title ? title : "GreenLands"} />
+          <meta name="twitter:site" content="@proranje" />
+          <meta name="twitter:creator" content="@proranje" />
+          <meta name="twitter:title" content={title ? title : "Proranje"} />
           <meta
             name="twitter:description"
             content={description ? description : ""}
           />
           <meta
             name="twitter:image"
-            content="https://green-land-eight.vercel.app/images/ak-020-amsterdam-genetics.jpg"
+            content="https://proranje.vercel.app/_next/image?url=%2Fimages%2FVroesenlaan.jpg&w=1200&q=75"
           />
           <link
             rel="apple-touch-icon"
