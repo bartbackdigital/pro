@@ -5,6 +5,7 @@ import GoogleMapsLocations from "@/components/GoogleMapsLocations";
 import QuadrupleListSection from "@/components/QuadrupleListSection";
 import TrippleNumberSection from "@/components/TrippleNumberSection";
 import ContentMiddleRightSection from "@/layout/ContentMiddleRightSection";
+import ProjectOverviewSection from "@/components/ProjectOverviewSection";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
         <QuadrupleListSection />
         <TrippleNumberSection />
         <ContentMiddleRightSection />
+        <ProjectOverviewSection />
       </Layout>
     </>
   );

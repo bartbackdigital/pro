@@ -64,9 +64,9 @@ function QuadrupleListSection() {
               key={section.title}
               className={`flex-1 ${
                 (index + 1) % 2 === 0
-                  ? "bg-contentGray md:bg-white"
+                  ? "bg-contentGray md:bg-white "
                   : "bg-white"
-              } p-7 pl-0`}
+              } p-7 md:pl-0`}
             >
               <h3 className="text-textGray text-[20px] font-medium">
                 {section.title}
