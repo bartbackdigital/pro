@@ -1,4 +1,5 @@
 import React from "react";
+import StandardFormComponent from "./StandardFormComponent";
 
 function DoubleContactSection() {
   return (
@@ -63,7 +64,9 @@ function DoubleContactSection() {
               </div>
             </div>
           </div>
-          <div className="flex-1 bg-primary text-white">Test</div>
+          <div className="flex-1 bg-primary text-white">
+            <StandardFormComponent />
+          </div>
         </div>
       </div>
     </section>
