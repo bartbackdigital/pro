@@ -67,7 +67,9 @@ export default function Layout({ children, title, description }: any) {
           <meta name="theme-color" content="#ffffff" />
         </Head>
         <Header />
-        <main className="font-body text-defaultText">{children}</main>
+        <main className="font-body text-defaultText overflow-x-hidden">
+          {children}
+        </main>
         <Footer />
       </div>
     </>
