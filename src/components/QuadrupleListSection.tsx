@@ -50,17 +50,19 @@ function QuadrupleListSection() {
   return (
     <section className="relative w-full mt-10">
       <div className="bg-primary py-10 text-white text-[30px] font-bold font-nunito">
-        <div className="max-w-screen-xl pl-10 mx-auto">
-          <h2>Onze mogelijkheden</h2>
-          <div className="w-[100px] border-b-[3px] mt-3 border-b-primary-50"></div>
+        <div className="max-w-screen-xl mx-auto">
+          <div className="px-5">
+            <h2>Onze mogelijkheden</h2>
+            <div className="w-[100px] border-b-[3px] mt-3 border-b-primary-50"></div>
+          </div>
         </div>
       </div>
-      <div className="max-w-screen-xl mx-auto py-10 px-5 relative block pb-32">
+      <div className="max-w-screen-xl mx-auto py-10 relative block pb-32 px-5">
         <div className="flex md:space-x-5 flex-col md:flex-row space-y-5 md:space-y-0">
           {listSections.map((section, index) => (
             <div
               key={section.title}
-              className={`pr-5 flex-1 ${
+              className={`flex-1 ${
                 (index + 1) % 2 === 0
                   ? "bg-contentGray md:bg-white"
                   : "bg-white"
