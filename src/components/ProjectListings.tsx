@@ -1,63 +1,70 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function ProjectListings() {
+  const [activeSlide, setActiveSlide] = useState(0); // State to track the active slide
+
+  // Slider settings
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    beforeChange: (current: any, next: any) => setActiveSlide(next), // Update active slide index
+    customPaging: (i: any) => (
+      <div
+        style={{
+          width: "15px",
+          height: "15px",
+          border: i === activeSlide ? "2px solid #ea4517" : "2px solid #f7f7f7", // Conditional background color ,
+          background: i === activeSlide ? "#ea4517" : "#f7f7f7", // Conditional background color
+          borderRadius: "50%",
+          padding: "5px",
+        }}
+      ></div>
+    ),
+    appendDots: (dots: any) => (
+      <div
+        style={{
+          borderRadius: "10px",
+          padding: "10px",
+        }}
+      >
+        <ul style={{ margin: "0px" }}> {dots} </ul>
+      </div>
+    ),
+  };
+
   return (
-    <div className="grid grid-cols-3 space-x-10">
-      <div className="relative">
-        <div className="max-h-[200px] overflow-hidden relative">
-          <Image
-            src="/images/Vroesenlaan.jpg"
-            width={400}
-            height={200}
-            alt=""
-          />
-          <div className="bg-primary absolute z-10 left-0 bottom-0 p-2 w-[300px] text-white">
-            <h4 className="text-[18px] font-bold">Heemraadssingel</h4>
-            <span>Ontwikkelpand - Rotterdam</span>
+    <div className="w-full">
+      <Slider {...settings} className="">
+        {Array.from({ length: 5 }).map((_, index) => (
+          <div className="pr-10" key={index}>
+            <div className="relative w-full h-[200px] overflow-hidden">
+              <Image
+                src="/images/Vroesenlaan.jpg"
+                layout="responsive"
+                width={400}
+                height={200}
+                objectFit="cover"
+                alt=""
+              />
+              <div className="bg-primary absolute z-10 left-0 bottom-0 p-2 w-full text-white">
+                <h4 className="text-[18px] font-bold">Heemraadssingel</h4>
+                <span>Ontwikkelpand - Rotterdam</span>
+              </div>
+            </div>
+            <p className="py-5 text-[17px]">
+              Lange termijn belegging in Amsterdam-Zuid. Grondig gerenoveerd en
+              momenteel verhuurd aan starters.
+            </p>
           </div>
-        </div>
-        <p className="py-5 text-[17px]">
-          Lange termijn belegging in Amsterdam-Zuid. Grondig gerenoveerd en
-          momenteel verhuurd aan starters.
-        </p>
-      </div>
-      <div className="relative">
-        <div className="max-h-[200px] overflow-hidden relative">
-          <Image
-            src="/images/Vroesenlaan.jpg"
-            width={400}
-            height={200}
-            alt=""
-          />
-          <div className="bg-primary absolute z-10 left-0 bottom-0 p-2 w-[300px] text-white">
-            <h4 className="text-[18px] font-bold">Heemraadssingel</h4>
-            <span>Ontwikkelpand - Rotterdam</span>
-          </div>
-        </div>
-        <p className="py-5 text-[17px]">
-          Lange termijn belegging in Amsterdam-Zuid. Grondig gerenoveerd en
-          momenteel verhuurd aan starters.
-        </p>
-      </div>
-      <div className="relative">
-        <div className="max-h-[200px] overflow-hidden relative">
-          <Image
-            src="/images/Vroesenlaan.jpg"
-            width={400}
-            height={200}
-            alt=""
-          />
-          <div className="bg-primary absolute z-10 left-0 bottom-0 p-2 w-[300px] text-white">
-            <h4 className="text-[18px] font-bold">Heemraadssingel</h4>
-            <span>Ontwikkelpand - Rotterdam</span>
-          </div>
-        </div>
-        <p className="py-5 text-[17px]">
-          Lange termijn belegging in Amsterdam-Zuid. Grondig gerenoveerd en
-          momenteel verhuurd aan starters.
-        </p>
-      </div>
+        ))}
+      </Slider>
     </div>
   );
 }

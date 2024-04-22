@@ -12,7 +12,7 @@ function ProjectOverviewSection() {
           </div>
         </div>
       </div>
-      <div className="max-w-screen-xl mx-auto py-10 relative block pb-20 px-5">
+      <div className="max-w-screen-xl mx-auto py-10">
         <ProjectListings />
       </div>
     </section>
