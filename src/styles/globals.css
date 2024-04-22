@@ -8,8 +8,7 @@
   .stap02,
   .stap03,
   .stap04 {
-    background: url(https://cloud.proranje.nl/2018/09/stap-1.png) top left
-      no-repeat #fff;
+    background: url(/images/stap-1.png) top left no-repeat #fff;
     background-position: 30px 20px !important;
   }
   .stap_trans .stap01,
@@ -30,15 +29,15 @@
   }
 
   .stap02 {
-    background-image: url(https://cloud.proranje.nl/2018/09/stap-2.png);
+    background-image: url(/images/stap-2.png);
   }
 
   .stap03 {
-    background-image: url(https://cloud.proranje.nl/2018/09/stap-3.png);
+    background-image: url(/images/stap-3.png);
   }
 
   .stap04 {
-    background-image: url(https://cloud.proranje.nl/2018/09/stap-4.png);
+    background-image: url(/images/stap-4.png);
   }
   .footer_listing a {
     @apply list-none pl-5 float-left w-full;

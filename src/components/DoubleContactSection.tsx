@@ -13,9 +13,9 @@ function DoubleContactSection() {
         </div>
       </div>
       <div className="max-w-screen-xl mx-auto py-10 relative block">
-        <div className="flex px-5">
+        <div className="flex flex-col md:flex-row px-5 xl:px-0">
           <div className="flex-1 py-10 space-y-10 bg-[#0181a8] text-white flex flex-col">
-            <div className="pl-28 pr-16 stap01 bg-transparent">
+            <div className="pl-24 pr-10 md:pr-16  stap01 bg-transparent">
               <div className="flex-1 ">
                 <h4 className="text-[28px] font-bold mb-5">
                   Vul het aanvraagformulier in
@@ -27,7 +27,7 @@ function DoubleContactSection() {
                 </p>
               </div>
             </div>
-            <div className="pl-28 pr-16 stap02 bg-transparent">
+            <div className="pl-24 pr-10 md:pr-16  stap02 bg-transparent">
               <div className="flex-1">
                 <h4 className="text-[28px] font-bold mb-5">
                   Binnen 24 uur contact
@@ -39,7 +39,7 @@ function DoubleContactSection() {
                 </p>
               </div>
             </div>
-            <div className="pl-28 pr-16 stap03 bg-transparent">
+            <div className="pl-24 pr-10 md:pr-16 stap03 bg-transparent">
               <div className="flex-1">
                 <h4 className="text-[28px] font-bold mb-5">
                   Ontvang waardebepaling of bod
@@ -53,7 +53,7 @@ function DoubleContactSection() {
                 </p>
               </div>
             </div>
-            <div className="pl-28 pr-16 stap04 bg-transparent">
+            <div className="pl-24 pr-10 md:pr-16  stap04 bg-transparent">
               <div className="flex-1">
                 <h4 className="text-[28px] font-bold mb-5">Overeenkomst</h4>
                 <p>
@@ -64,7 +64,7 @@ function DoubleContactSection() {
               </div>
             </div>
           </div>
-          <div className="flex-1 bg-primary text-white overflow-auto relative">
+          <div className="flex-1 mt-10 md:mt-0 bg-primary text-white overflow-auto relative">
             <div
               id="floatingForm"
               className="sticky top-0"

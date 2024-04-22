@@ -58,11 +58,11 @@ function StandardFormComponent() {
   };
 
   return (
-    <section className="w-full sticky top-0">
+    <section className="w-full sticky top-0 py-10">
       <div className="relative max-w-screen-xl mx-auto py-6 font-poppins">
         <form onSubmit={handleSubmit}>
           <div className="max-w-screen-md w-full flex flex-col space-y-3 px-10 mx-auto">
-            <div className="flex space-x-5 flex-col md:flex-row">
+            <div className="flex space-y-3 md:space-y-0 md:space-x-5 flex-col md:flex-row">
               <input
                 type="text"
                 name="first_name"

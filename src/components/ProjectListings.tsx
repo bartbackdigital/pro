@@ -7,12 +7,12 @@ import "slick-carousel/slick/slick-theme.css";
 function ProjectListings() {
   const [activeSlide, setActiveSlide] = useState(0); // State to track the active slide
 
-  // Slider settings
+  // Slider settings with responsive adjustments
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 3, // Default for desktops
     slidesToScroll: 1,
     beforeChange: (current: any, next: any) => setActiveSlide(next), // Update active slide index
     customPaging: (i: any) => (
@@ -20,8 +20,8 @@ function ProjectListings() {
         style={{
           width: "15px",
           height: "15px",
-          border: i === activeSlide ? "2px solid #ea4517" : "2px solid #f7f7f7", // Conditional background color ,
-          background: i === activeSlide ? "#ea4517" : "#f7f7f7", // Conditional background color
+          border: i === activeSlide ? "2px solid #ea4517" : "2px solid #f7f7f7",
+          background: i === activeSlide ? "#ea4517" : "#f7f7f7",
           borderRadius: "50%",
           padding: "5px",
         }}
@@ -34,16 +34,36 @@ function ProjectListings() {
           padding: "10px",
         }}
       >
-        <ul className=""> {dots} </ul>
+        <ul> {dots} </ul>
       </div>
     ),
+    responsive: [
+      {
+        breakpoint: 1024, // Desktop and above
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 768, // Tablets and small desktops
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480, // Mobile and below
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   return (
     <div className="w-full pb-10">
       <Slider {...settings} className="pb-10">
         {Array.from({ length: 5 }).map((_, index) => (
-          <div className="pr-10" key={index}>
+          <div className="px-5" key={index}>
             <div className="relative w-full h-[200px] overflow-hidden">
               <Image
                 src="/images/Vroesenlaan.jpg"

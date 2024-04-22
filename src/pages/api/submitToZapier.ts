@@ -6,12 +6,23 @@ export default async function handler(
 ) {
   if (req.method === "POST") {
     // Destructuring to extract all fields directly
-    const { name, email, phone, inquiryType, message, formId, submissionDate } =
-      req.body;
+    const {
+      name,
+      email,
+      first_name,
+      last_name,
+      phone,
+      inquiryType,
+      message,
+      formId,
+      submissionDate,
+    } = req.body;
 
     const payload = {
       formId: formId, // Unique ID for each submission
       name: name,
+      first_name: first_name,
+      last_name: last_name,
       email: email,
       phone: phone,
       inquiryType: inquiryType,

@@ -6,6 +6,8 @@ function HeaderFormComponent() {
   const [formData, setFormData] = useState({
     formId: uuidv4(), // Generate a unique ID for each form instance
     name: "",
+    first_name: "",
+    last_name: "",
     email: "",
     phone: "",
     inquiryType: "", // Changed from product to inquiryType
@@ -38,8 +40,10 @@ function HeaderFormComponent() {
       console.log(data);
       // Reset form after submission
       setFormData({
-        formId: uuidv4(), // Generate a new unique ID for the next form
+        formId: uuidv4(),
         name: "",
+        first_name: "",
+        last_name: "",
         email: "",
         phone: "",
         inquiryType: "",
@@ -72,7 +76,7 @@ function HeaderFormComponent() {
                 name="first_name"
                 className="w-full"
                 placeholder="Voornaam"
-                value={formData.name}
+                value={formData.first_name}
                 onChange={handleChange}
               />
               <input
@@ -80,7 +84,7 @@ function HeaderFormComponent() {
                 name="last_name"
                 className="w-full"
                 placeholder="Achternaam"
-                value={formData.name}
+                value={formData.last_name}
                 onChange={handleChange}
               />
             </div>
