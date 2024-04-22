@@ -4,6 +4,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@800&family=Poppins:wght@400&display=swap");
 
 @layer components {
+  .stap01,
+  .stap02,
+  .stap03,
+  .stap04 {
+    background: url(https://cloud.proranje.nl/2018/09/stap-1.png) top left
+      no-repeat #fff;
+    background-position: 30px 20px !important;
+  }
+  .stap_trans .stap01,
+  .stap_trans .stap02,
+  .stap_trans .stap03,
+  .stap_trans .stap04 {
+    background-color: transparent !important;
+    background-position: 60px 10px;
+    font-size: 15px;
+    padding-left: 100px !important;
+    padding-right: 50px !important;
+    padding-top: 40px;
+  }
+  .stap02 {
+    background-image: url(https://cloud.proranje.nl/2018/09/stap-2.png);
+  }
+
+  .stap03 {
+    background-image: url(https://cloud.proranje.nl/2018/09/stap-3.png);
+  }
+
+  .stap04 {
+    background-image: url(https://cloud.proranje.nl/2018/09/stap-4.png);
+  }
   .footer_listing a {
     @apply list-none pl-5 float-left w-full;
     position: relative;

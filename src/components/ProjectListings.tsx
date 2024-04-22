@@ -34,14 +34,14 @@ function ProjectListings() {
           padding: "10px",
         }}
       >
-        <ul style={{ margin: "0px" }}> {dots} </ul>
+        <ul className=""> {dots} </ul>
       </div>
     ),
   };
 
   return (
-    <div className="w-full">
-      <Slider {...settings} className="">
+    <div className="w-full pb-10">
+      <Slider {...settings} className="pb-10">
         {Array.from({ length: 5 }).map((_, index) => (
           <div className="pr-10" key={index}>
             <div className="relative w-full h-[200px] overflow-hidden">

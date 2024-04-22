@@ -6,6 +6,7 @@ import QuadrupleListSection from "@/components/QuadrupleListSection";
 import TrippleNumberSection from "@/components/TrippleNumberSection";
 import ContentMiddleRightSection from "@/layout/ContentMiddleRightSection";
 import ProjectOverviewSection from "@/components/ProjectOverviewSection";
+import DoubleContactSection from "@/components/DoubleContactSection";
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
         <TrippleNumberSection />
         <ContentMiddleRightSection />
         <ProjectOverviewSection />
+        <DoubleContactSection />
       </Layout>
     </>
   );
