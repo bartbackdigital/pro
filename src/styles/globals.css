@@ -23,6 +23,12 @@
     padding-right: 50px !important;
     padding-top: 40px;
   }
+  .sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0; /* Adjust this if you want some space at the top */
+  }
+
   .stap02 {
     background-image: url(https://cloud.proranje.nl/2018/09/stap-2.png);
   }

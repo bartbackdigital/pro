@@ -1,18 +1,18 @@
 import React, { useState } from "react";
-import OrangeButton from "./OrangeButton";
-import { v4 as uuidv4 } from "uuid"; // Ensure you've installed uuid with `npm install uuid`
+import OrangeButton from "./OrangeButton"; // Assuming OrangeButton is another component
+import { v4 as uuidv4 } from "uuid";
 
 function StandardFormComponent() {
   const [formData, setFormData] = useState({
-    formId: uuidv4(), // Generate a unique ID for each form instance
+    formId: uuidv4(),
     name: "",
     first_name: "",
     last_name: "",
     email: "",
     phone: "",
-    inquiryType: "", // Changed from product to inquiryType
+    inquiryType: "",
     message: "",
-    submissionDate: new Date().toISOString().replace("T", " ").substring(0, 19), // Formatted date
+    submissionDate: new Date().toISOString().replace("T", " ").substring(0, 19),
   });
 
   const handleChange = (e: any) => {
@@ -33,14 +33,13 @@ function StandardFormComponent() {
           submissionDate: new Date()
             .toISOString()
             .replace("T", " ")
-            .substring(0, 19), // Update date to the moment of submission
+            .substring(0, 19),
         }),
       });
       const data = await response.json();
       console.log(data);
-      // Reset form after submission
       setFormData({
-        formId: uuidv4(), // Generate a new unique ID for the next form
+        formId: uuidv4(),
         name: "",
         first_name: "",
         last_name: "",
@@ -53,16 +52,14 @@ function StandardFormComponent() {
           .replace("T", " ")
           .substring(0, 19),
       });
-      // Add any post-submission logic here (e.g., display a success message)
     } catch (error) {
       console.error("Error submitting form:", error);
     }
   };
 
   return (
-    <section className="w-full ">
+    <section className="w-full sticky top-0">
       <div className="relative max-w-screen-xl mx-auto py-6 font-poppins">
-        <div className="text-center mb-14"></div>
         <form onSubmit={handleSubmit}>
           <div className="max-w-screen-md w-full flex flex-col space-y-3 px-10 mx-auto">
             <div className="flex space-x-5 flex-col md:flex-row">
@@ -71,7 +68,7 @@ function StandardFormComponent() {
                 name="first_name"
                 className="w-full"
                 placeholder="Voornaam"
-                value={formData.name}
+                value={formData.first_name}
                 onChange={handleChange}
               />
               <input
@@ -79,7 +76,7 @@ function StandardFormComponent() {
                 name="last_name"
                 className="w-full"
                 placeholder="Achternaam"
-                value={formData.name}
+                value={formData.last_name}
                 onChange={handleChange}
               />
             </div>
@@ -126,9 +123,7 @@ function StandardFormComponent() {
               onChange={handleChange}
             />
             <button
-              className="inline-block cursor-pointer select-none align-top m-0 text-center font-body text-base relative  
-    py-4 px-4 bg-[#ee6556] text-white border border-[#ea6953] rounded shadow-[0_3px_1px_#b64a38] 
-    transition-all duration-200 outline-none leading-none text-body font-normal hover:bg-[#ba463a] hover:shadow-[0_3px_1px_#ba463a] hover:text-white"
+              className="inline-block cursor-pointer select-none align-top m-0 text-center font-body text-base relative py-4 px-4 bg-[#ee6556] text-white border border-[#ea6953] rounded shadow-[0_3px_1px_#b64a38] transition-all duration-200 outline-none leading-none text-body font-normal hover:bg-[#ba463a] hover:shadow-[0_3px_1px_#ba463a] hover:text-white"
               type="submit"
             >
               Versturen

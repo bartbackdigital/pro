@@ -3,7 +3,7 @@ import StandardFormComponent from "./StandardFormComponent";
 
 function DoubleContactSection() {
   return (
-    <section className="relative w-full ">
+    <section className="relative w-full">
       <div className="bg-primary py-10 text-white text-[30px] font-bold font-nunito">
         <div className="max-w-screen-xl mx-auto">
           <div className="px-5">
@@ -14,7 +14,7 @@ function DoubleContactSection() {
       </div>
       <div className="max-w-screen-xl mx-auto py-10 relative block">
         <div className="flex px-5">
-          <div className="flex-1 py-10 space-y-10 bg-[#0181a8]  text-white flex flex-col">
+          <div className="flex-1 py-10 space-y-10 bg-[#0181a8] text-white flex flex-col">
             <div className="pl-28 pr-16 stap01 bg-transparent">
               <div className="flex-1 ">
                 <h4 className="text-[28px] font-bold mb-5">
@@ -22,7 +22,7 @@ function DoubleContactSection() {
                 </h4>
                 <p>
                   U meldt kosteloos uw object aan via het online
-                  aanmeldformulier. U bepaald zelf welke informatie u prettig
+                  aanmeldformulier. U bepaalt zelf welke informatie u prettig
                   vindt om te verstrekken.
                 </p>
               </div>
@@ -64,8 +64,14 @@ function DoubleContactSection() {
               </div>
             </div>
           </div>
-          <div className="flex-1 bg-primary text-white">
-            <StandardFormComponent />
+          <div className="flex-1 bg-primary text-white overflow-auto relative">
+            <div
+              id="floatingForm"
+              className="sticky top-0"
+              style={{ height: "auto", maxHeight: "100vh", overflowY: "auto" }}
+            >
+              <StandardFormComponent />
+            </div>
           </div>
         </div>
       </div>

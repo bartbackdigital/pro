@@ -57,7 +57,7 @@ const HeaderDesktop: React.FC = () => {
   ];
   // Helper function to render menu items with or without hrefs
   const renderMenuItem = (item: MenuItem, index: number) => (
-    <div key={index} className="relative group tracking-[0.5px] pb-7 pt-7">
+    <div key={index} className="relative z-30 group tracking-[0.5px] pb-7 pt-7">
       {item.href ? (
         <Link href={item.href} passHref>
           <span className="cursor-pointer">{item.title}</span>
