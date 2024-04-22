@@ -51,11 +51,19 @@ export default async function handler(
 
       const result = await zapierResponse.json();
       res.status(200).json({ message: "Form submitted successfully", result });
-    } catch (error) {
+    } catch (error: unknown) {
+      // Explicitly marking error as unknown
       console.error("API Route error", error);
-      res
-        .status(500)
-        .json({ message: "Failed to submit form", error: error.message });
+      if (error instanceof Error) {
+        res
+          .status(500)
+          .json({ message: "Failed to submit form", error: error.message });
+      } else {
+        res.status(500).json({
+          message: "Failed to submit form",
+          error: "An unknown error occurred",
+        });
+      }
     }
   } else {
     res.setHeader("Allow", ["POST"]);
